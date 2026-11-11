@@ -1,15 +1,22 @@
 # Code Block
 
-A GitHub Pages landing page embedding the Scratch project:
-https://scratch.mit.edu/projects/1438951325/
+סביבת תכנות חזותית בבלוקים, שנמצאת בשלבי פיתוח ראשוניים.
 
-## GitHub Pages
+## מה כבר קיים
+- משטח עבודה עם בלוקים של לוגיקה, לולאות, מתמטיקה, טקסט, רשימות, משתנים ופונקציות
+- תצוגת קוד JavaScript שנוצר מהבלוקים
+- הפעלה מבודדת של קוד בדפדפן והצגת הפלט
+- שמירה וטעינה של פרויקטים בפורמט JSON
+- ממשק בעברית
 
-In repository **Settings → Pages → Build and deployment**, choose **GitHub Actions** as source. Then open **Actions → Deploy GitHub Pages** to check deployment.
+## הרצה
+פתחו את `index.html` בדפדפן עם חיבור לאינטרנט, או פרסמו דרך GitHub Pages.
+ב־Settings → Pages בחרו **GitHub Actions**. תהליך הפריסה מוגדר בקובץ `.github/workflows/pages.yml`.
 
-Expected URL (after successful deployment):
-https://naftalibarber.github.io/Code-block/
+## הבהרה בנוגע לקבצים שהורדו מ־Scratch
+הקבצים `common.bundle.js`, `projects.bundle.js`, `projects.intl.js`, `common.css`, `projects.css`, `polyfill.min.js` הם קובצי אתר Scratch וכוללים קוד אתר רב, אך אינם חבילת המקור המלאה של עורך Scratch, סביבת Scratch VM או Scratch Blocks. קובצי המקור שהועלו לשיחה עדיין **לא** הוכנסו למאגר GitHub.
 
-## Important
+הגרסה הזו משתמשת בספריית Blockly (טעינה דרך CDN) ליצירת בלוקים, ולא בקבצי האתר שהורדו. זו התחלה לפיתוח עורך משלנו, לא העתקה של ממשק Scratch.
 
-The original uploaded `common.bundle.js`, `projects.bundle.js`, CSS and localization files are Scratch **website** assets, not the Scratch project source. This repository embeds the original project instead of pretending those website files comprise the game. To host the project independently, download its `.sb3` file from Scratch and use a compatible player such as TurboWarp Packager.
+## בהמשך
+אפשר להוסיף במה, דמויות, אירועים, תנועה, שמירת פרויקטים בענן והתחברות משתמשים. לעורך בסגנון Scratch כדאי לבחון את הפרויקטים הפתוחים `scratch-blocks`, `scratch-vm` ו-`scratch-gui` ואת רישיונותיהם.
