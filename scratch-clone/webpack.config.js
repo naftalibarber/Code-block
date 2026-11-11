@@ -5,11 +5,13 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = [
   {
     entry: "./src/index.jsx",
-    mode: "development",
+    mode: process.env.NODE_ENV === "production" ? "production" : "development",
     target: "web",
     output: {
       path: path.resolve(__dirname, "dist/client"),
       filename: "client_bundle.js",
+      publicPath: process.env.NODE_ENV === "production" ? "/Code-block/" : "/",
+      clean: true,
     },
     plugins: [
       new HtmlWebpackPlugin({

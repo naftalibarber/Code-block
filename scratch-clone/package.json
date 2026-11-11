@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack --config webpack.config.js",
     "start": "webpack server --open",
-    "dev": "npm-run-all -s build start"
+    "dev": "npm-run-all -s build start",
+    "build:pages": "webpack --config webpack.config.js --mode production"
   },
   "keywords": [],
   "author": "tamalCodes",
