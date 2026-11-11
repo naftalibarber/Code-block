@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* body {
+  font-family: "Poppins", sans-serif;
+} */
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+@layer base {
+  .movebox {
+    @apply text-center rounded bg-blue-500 text-white p-2 my-2 text-[14px] cursor-pointer w-[200px] font-poppins flex justify-center items-center
+  }
+
+  .moveinput {
+    @apply text-black w-[60px] bg-white mx-2 p-1 py-0 text-center rounded-md font-poppins
+  }
+
+  .messagebox {
+    @apply text-center rounded bg-purple-500 text-white p-2 my-2 text-[14px] cursor-pointer w-[200px] font-poppins flex flex-col justify-center items-center space-y-2
+  }
+}
+
+.moveicon {
+  width: 18px !important;
+  height: 18px !important;
+}
+/* Code Block Studio • modern responsive UI */
+:root{--surface:#fff;--bg:#f3f6fc;--line:#e2e9f4;--text:#182541;--violet:#6759e8}
+*{box-sizing:border-box}html,body,#root{height:100%;margin:0}body{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--text)}
+.studio-shell{height:100vh;display:flex;flex-direction:column;background:linear-gradient(135deg,#f8faff,#eff3fb);overflow:hidden}
+.studio-header{height:72px;flex:none;padding:12px 24px;background:#fff;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:18px;box-shadow:0 3px 18px #28375c08}
+.studio-brand{display:flex;align-items:center;gap:12px}.studio-logo{background:linear-gradient(145deg,#8576ff,#4f40cb);color:white;display:grid;place-items:center;width:44px;height:44px;border-radius:14px;box-shadow:0 7px 15px #6555dc38;font-size:24px}
+.studio-brand strong{display:block;font-size:18px;letter-spacing:-.04em}.studio-brand small{display:block;color:#8590a6;font-size:10px;font-weight:700;letter-spacing:.11em;margin-top:3px}
+.studio-status{color:#60708c;font-size:13px}.studio-status::first-letter{color:#36c696}.studio-version{font-size:12px;font-weight:700;padding:9px 14px;background:#f7f8fc;border:1px solid var(--line);border-radius:11px;color:#62708b}
+.studio-main{display:flex;gap:14px;padding:16px;flex:1;min-height:0}.studio-editor{display:flex;flex:1;min-width:0;min-height:0;background:white;overflow:hidden;border:1px solid var(--line);border-radius:18px;box-shadow:0 10px 30px #2332560c}.studio-preview{width:34%;min-width:275px;position:relative;overflow:auto;display:flex;background:white;border:1px solid var(--line);border-radius:18px;box-shadow:0 10px 30px #2332560c}
+.studio-editor>div:first-child{background:#fafbfe;border-right:1px solid var(--line);padding:16px 12px}.studio-editor>div:nth-child(2){background-color:#fff;background-image:radial-gradient(#e3eaf5 1px,transparent 1px);background-size:20px 20px;padding:18px}
+.studio-editor>div:nth-child(2)>div:first-child{background:#fffffff2;padding:10px;border-radius:12px;box-shadow:0 2px 15px #24365a12}.studio-editor>div:nth-child(2)>div:first-child h1{font-size:13px!important;border-radius:9px;cursor:pointer;transition:transform .2s}.studio-editor>div:nth-child(2)>div:first-child h1:hover{transform:translateY(-2px)}
+.studio-editor .movebox,.studio-editor .messagebox{border-radius:9px;box-shadow:0 3px 0 #13234822}.studio-editor button,.studio-preview button{transition:transform .16s}.studio-editor button:hover,.studio-preview button:hover{transform:translateY(-1px)}
+@media(max-width:950px){.studio-main{flex-direction:column;overflow:auto}.studio-editor{flex:none;min-height:560px}.studio-preview{width:100%;min-height:380px;flex:none}.studio-status{display:none}}
+@media(max-width:600px){.studio-header{height:64px;padding:9px 12px}.studio-version{display:none}.studio-main{padding:8px;gap:8px}.studio-editor>div:first-child{width:180px!important;flex-basis:180px!important}.studio-editor .movebox,.studio-editor .messagebox{width:155px!important;font-size:12px!important}}
