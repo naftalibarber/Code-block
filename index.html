@@ -75,14 +75,14 @@ const js=code.value, unique='code-block-output';
 runner=document.createElement('iframe');
 runner.setAttribute('sandbox','allow-scripts');
 runner.style.display='none';
-const escaped=js.replace(/<\\/script/gi,'<\\/script');
+const escaped=js.replace(/<[/]script/gi,'<\\\\/script');
 runner.srcdoc='<!doctype html><meta charset="utf-8"><script>'+
 'const send=v=>parent.postMessage({tag:"'+unique+'",value:String(v)},"*");'+
 'console.log=(...a)=>send(a.join(" "));console.error=(...a)=>send("שגיאה: "+a.join(" "));'+
 'window.alert=(x)=>send(x);'+
 'window.onerror=(m)=>{send("שגיאה: "+m);return true;};'+
 'try{'+escaped+'}catch(e){send("שגיאה: "+e.message)}'+
-'<\\/script>';
+'</scr'+'ipt>';
 document.body.appendChild(runner);
 status.textContent='התוכנית הופעלה';
 };
