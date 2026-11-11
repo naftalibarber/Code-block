@@ -12,7 +12,8 @@ function App({ update_list }) {
 
   function initializeSpriteSyles() {
     const el = document.getElementById(`${store.getState().sprite.active}-div`);
-    if (!el) return;\n    el.style.position = "relative";
+    if (!el) return;
+    el.style.position = "relative";
     el.style.left = "0px";
     el.style.top = "0px";
   }
@@ -26,7 +27,8 @@ function App({ update_list }) {
   };
 
   return (
-    <div className="studio-shell">\n      <header className="studio-header"><div className="studio-brand"><span className="studio-logo">◆</span><div><strong>Code Block</strong><small>CREATE · PLAY · IMAGINE</small></div></div><span className="studio-status">● Visual Coding Studio</span><span className="studio-version">Beta editor</span></header>
+    <div className="studio-shell">
+      <header className="studio-header"><div className="studio-brand"><span className="studio-logo">◆</span><div><strong>Code Block</strong><small>CREATE · PLAY · IMAGINE</small></div></div><span className="studio-status">● Visual Coding Studio</span><span className="studio-version">Beta editor</span></header>
       <main className="studio-main">
         <DragDropContext onDragEnd={onDragEnd}>
           <div className="studio-editor">
@@ -37,7 +39,7 @@ function App({ update_list }) {
             <PreviewArea />
           </div>
         </DragDropContext>
-      </div>
+      </main>
     </div>
   );
 }
